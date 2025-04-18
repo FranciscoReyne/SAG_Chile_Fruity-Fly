@@ -1,24 +1,24 @@
-# SAG_Chile_Fruity-Fly
+# SAG_Chile_Fruity-Fly : MEDITERRANEAN FRUIT FLY Mosca de la Fruta (Ceratitis capitata  (Wied) )
 
 <p align="center">
   
-<img src="23.jpg" width="500"/>
+  <img src="23.jpg" width="300"/>
 
 </p>
 
 SAG Chile Visualización de plagas - MEDITERRANEAN FRUIT FLY Mosca de la Fruta (Ceratitis capitata  (Wied) )
 
 
-<p align="lef">
+<p align="center">
   
-<img src="24.jpg" width="200"/>
+<img src="24.jpg" width="300"/>
 
 </p>
 
 
 <p align="center">
   
-<img src="33.png" width="200"/>
+<img src="33.png" width="300"/>
 
 </p>
 
