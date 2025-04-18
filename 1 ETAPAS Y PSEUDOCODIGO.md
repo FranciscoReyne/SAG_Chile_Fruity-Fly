@@ -60,15 +60,15 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
 
 
 
-## Código en Google-Colab.
+# Código en Google-Colab.
 
 
-# Instalacion de libreria camelot
+### Instalacion de libreria camelot
 
         !pip install camelot-py
 
 
-# Código base
+## Código base
 
         import pandas as pd
         from IPython.display import display
