@@ -24,8 +24,8 @@ SAG Chile Visualización de densidad poblacional de plaga - MEDITERRANEAN FRUIT 
 </p>
 
 
-https://github.com/FranciscoReyne/SAG_Chile_Fruity-Fly/blob/main/1%20ETAPAS%20Y%20PSEUDOCODIGO.md
+Etapa 1: https://github.com/FranciscoReyne/SAG_Chile_Fruity-Fly/blob/main/1%20ETAPAS%20Y%20PSEUDOCODIGO.md
 
-https://github.com/FranciscoReyne/SAG_Chile_Fruity-Fly/blob/main/2%20mapas%20-%20UI%20-%20installer.md
+Etapa 2: https://github.com/FranciscoReyne/SAG_Chile_Fruity-Fly/blob/main/2%20mapas%20-%20UI%20-%20installer.md
 
 
