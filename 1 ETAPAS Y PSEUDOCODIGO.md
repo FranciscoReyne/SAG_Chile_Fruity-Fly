@@ -20,16 +20,17 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
         df = pd.DataFrame(df)
 
 
-Crear y transformar variables: columnas de datos de gridmap (rectangular, hexagonal, octagonal).
 
 
 
-
-4. procesar datos: identificar variables de interés. trabajo de datos satelitales, puntos de muestreo, puntos positivos. Mapas: KeplerGL.
+5. procesar datos: identificar variables de interés. trabajo de datos satelitales, puntos de muestreo, puntos positivos. Mapas: KeplerGL.
 
         https://www.youtube.com/watch?v=HpqWSjuUl_A
 
- 
+ 5.5. Crear y transformar variables: de datosen tablas a gridmap (rectangular, hexagonal, octagonal).
+
+        https://mappinggis.com/2024/07/uso-de-qgis-para-crear-mapas-hexagonales/
+
 
 6. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
 
@@ -38,6 +39,14 @@ Crear y transformar variables: columnas de datos de gridmap (rectangular, hexago
 
 
 8. Visualización y Ux de información: kepler gl
+
+
+
+
+
+
+
+
 
 
 
