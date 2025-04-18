@@ -1,8 +1,9 @@
 
 # ETAPAS Y PSEUDOCODIGO
 
-A continuacion presentamos una serie de etapas para una visualizacion y UX amigable e intuituva de datos de plaga de la mosca.
+A continuacion presentamos una serie de etapas generales para una visualizacion y UX amigable e intuituva de datos de plaga de la mosca.
 
+---
 
 1. Obtención de datos: Desde link SAG, extraer datos manual o automaticamente. descargar fichas tecnicas que son archivos pdf, con datos en tablas.
 
@@ -27,40 +28,30 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
 
         https://www.youtube.com/watch?v=HpqWSjuUl_A
 
- 4.5. Crear y transformar variables: de datosen tablas a gridmap (rectangular, hexagonal, octagonal).
+5. Crear y transformar variables: de datosen tablas a gridmap (rectangular, hexagonal, octagonal).
 
         https://mappinggis.com/2024/07/uso-de-qgis-para-crear-mapas-hexagonales/
 
 
-5. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
+6. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
 
 
-6. Propagacion. Estimacion reglas simples,  reg. lineal, machine learning,
-7. mapeo heatmap, modelo de propagación (infectabilidad, etc modelos de epidemias).
-8. Visualización y Ux de información: kepler gl
+7. Propagacion. Estimacion reglas simples,  reg. lineal, machine learning,
+8. mapeo heatmap, modelo de propagación (infectabilidad, etc modelos de epidemias).
+9. Visualización y Ux de información: kepler gl e installador (.exe)
 
 
-9. Comentarios finales.
-
-
-
+10. Comentarios finales.
 
 
 
+---
+---
+---
 
 
 
-
-
-
-
-
-
-
-
-
-
-# Código en Google-Colab.
+# 2. Código en Google-Colab.
 
 
 ### Instalacion de libreria camelot
@@ -68,7 +59,7 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
         !pip install camelot-py
 
 
-## Código base
+## pasar de pdf a dataframe: Código base
 
         import pandas as pd
         from IPython.display import display
@@ -83,7 +74,7 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
         display(df)
 
 
-### ultima fila / columna
+### Para mostrar en el mapa el total por comuna: seleccionar dato de ultima fila / columna
 
     #seleccionar ultima fila
     # Si quieres obtenerlo como DataFrame:
@@ -103,9 +94,41 @@ ultimo valor
     print(numero)  # Ahora es un número, no un DataFrame
 
 
+---
+
+### COORDENADAS - UTM WGS 84 A Lat/Lon (EPSG:4326).
+
+Tienes tus coordenadas en **UTM WGS 84**, necesitas convertirlas a **Lat/Lon (EPSG:4326)** para que Kepler.gl pueda interpretarlas correctamente. 🚀  
+
+Aquí tienes cómo hacerlo en Python usando **PyProj**:  
+
+```python
+from pyproj import Transformer
+
+# Define la zona UTM y las coordenadas originales
+utm_x = TU_X_COORD
+utm_y = TU_Y_COORD
+zona = TU_ZONA  # Zona UTM (ejemplo: 19)
+hemisferio = "north"  # Cambia a "south" si estás en el hemisferio sur
+
+# Convertir de UTM WGS 84 a Lat/Lon
+transformer = Transformer.from_crs(f"EPSG:326{zona}" if hemisferio == "north" else f"EPSG:327{zona}", "EPSG:4326")
+lon, lat = transformer.transform(utm_x, utm_y)
+
+print(f"Coordenadas en Lat/Lon: {lat}, {lon}")
+```
+
+✅ **Convierte tus coordenadas UTM a formato compatible con Kepler.gl**  
+✅ **Permite visualizar correctamente los puntos en el mapa**  
+
+Ajusta y haz la prueba con los datos del SAG. 
 
 
-# MAPAS
+
+---
+
+
+# TRASPASO DE DATOS A MAPAS
 
 ##  GEOPANDAS contextily: 
 ##  Convertir de UTM a lat/lon:Transformer pyproj
@@ -174,33 +197,6 @@ ultimo valor
     
     mapa
 
-
-### COORDENADAS - UTM WGS 84 A Lat/Lon (EPSG:4326).
-
-Tienes tus coordenadas en **UTM WGS 84**, necesitas convertirlas a **Lat/Lon (EPSG:4326)** para que Kepler.gl pueda interpretarlas correctamente. 🚀  
-
-Aquí tienes cómo hacerlo en Python usando **PyProj**:  
-
-```python
-from pyproj import Transformer
-
-# Define la zona UTM y las coordenadas originales
-utm_x = TU_X_COORD
-utm_y = TU_Y_COORD
-zona = TU_ZONA  # Zona UTM (ejemplo: 19)
-hemisferio = "north"  # Cambia a "south" si estás en el hemisferio sur
-
-# Convertir de UTM WGS 84 a Lat/Lon
-transformer = Transformer.from_crs(f"EPSG:326{zona}" if hemisferio == "north" else f"EPSG:327{zona}", "EPSG:4326")
-lon, lat = transformer.transform(utm_x, utm_y)
-
-print(f"Coordenadas en Lat/Lon: {lat}, {lon}")
-```
-
-✅ **Convierte tus coordenadas UTM a formato compatible con Kepler.gl**  
-✅ **Permite visualizar correctamente los puntos en el mapa**  
-
-Ajusta y haz la prueba con los datos del SAG. 
 
 
 ---
