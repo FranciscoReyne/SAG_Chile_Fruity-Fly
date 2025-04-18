@@ -175,4 +175,36 @@ ultimo valor
     mapa
 
 
-    
+### COORDENADAS - UTM WGS 84 A Lat/Lon (EPSG:4326).
+
+Tienes tus coordenadas en **UTM WGS 84**, necesitas convertirlas a **Lat/Lon (EPSG:4326)** para que Kepler.gl pueda interpretarlas correctamente. 🚀  
+
+Aquí tienes cómo hacerlo en Python usando **PyProj**:  
+
+```python
+from pyproj import Transformer
+
+# Define la zona UTM y las coordenadas originales
+utm_x = TU_X_COORD
+utm_y = TU_Y_COORD
+zona = TU_ZONA  # Zona UTM (ejemplo: 19)
+hemisferio = "north"  # Cambia a "south" si estás en el hemisferio sur
+
+# Convertir de UTM WGS 84 a Lat/Lon
+transformer = Transformer.from_crs(f"EPSG:326{zona}" if hemisferio == "north" else f"EPSG:327{zona}", "EPSG:4326")
+lon, lat = transformer.transform(utm_x, utm_y)
+
+print(f"Coordenadas en Lat/Lon: {lat}, {lon}")
+```
+
+✅ **Convierte tus coordenadas UTM a formato compatible con Kepler.gl**  
+✅ **Permite visualizar correctamente los puntos en el mapa**  
+
+Ajusta y haz la prueba con los datos del SAG. 
+
+
+---
+
+🚀🚀 😃  🚀🚀
+
+🚀🚀🚀 😃 🚀 🚀🚀
