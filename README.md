@@ -9,7 +9,7 @@
 
 <p align="center">
   
-<img src="33.png" width="1000"/>
+<img src="33.png" width="640"/>
 
 </p>
 
@@ -19,7 +19,7 @@ SAG Chile Visualización de densidad poblacional de plaga - MEDITERRANEAN FRUIT 
 
 <p align="center">
   
-<img src="24.jpg" width="1000"/>
+<img src="24.jpg" width="640"/>
 
 </p>
 
