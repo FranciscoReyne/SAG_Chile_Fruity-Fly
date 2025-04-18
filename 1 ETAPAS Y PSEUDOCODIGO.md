@@ -14,7 +14,7 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
         camelot: fx read_pdf
    
 
-4. pasar de tabla a pandas dataframe.
+3. pasar de tabla a pandas dataframe.
         
         df = tables[0].df
         df = pd.DataFrame(df)
@@ -23,22 +23,25 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
 
 
 
-5. procesar datos: identificar variables de interés. trabajo de datos satelitales, puntos de muestreo, puntos positivos. Mapas: KeplerGL.
+4. procesar datos: identificar variables de interés. trabajo de datos satelitales, puntos de muestreo, puntos positivos. Mapas: KeplerGL.
 
         https://www.youtube.com/watch?v=HpqWSjuUl_A
 
- 5.5. Crear y transformar variables: de datosen tablas a gridmap (rectangular, hexagonal, octagonal).
+ 4.5. Crear y transformar variables: de datosen tablas a gridmap (rectangular, hexagonal, octagonal).
 
         https://mappinggis.com/2024/07/uso-de-qgis-para-crear-mapas-hexagonales/
 
 
-6. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
+5. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
 
 
-7. Integrar machine learning, reg. lineal, mapeo heatmap, modelo de propagación (infectabilidad, etc modelos de epidemias).
-
-
+6. Propagacion. Estimacion reglas simples,  reg. lineal, machine learning,
+7. mapeo heatmap, modelo de propagación (infectabilidad, etc modelos de epidemias).
 8. Visualización y Ux de información: kepler gl
+
+
+9. Comentarios finales.
+
 
 
 
