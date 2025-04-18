@@ -11,17 +11,25 @@ A continuacion presentamos una serie de etapas para una visualizacion y UX amiga
 
 2. pasar de pdf a tabla
 
+        camelot: fx read_pdf
+   
+
+4. pasar de tabla a pandas dataframe.
+        
+        df = tables[0].df
+        df = pd.DataFrame(df)
 
 
-3. pasar de tabla a pandas dataframe.
+Crear y transformar variables: columnas de datos de gridmap (rectangular, hexagonal, octagonal).
+
+
 
 
 4. procesar datos: identificar variables de interés. trabajo de datos satelitales, puntos de muestreo, puntos positivos. Mapas: KeplerGL.
 
         https://www.youtube.com/watch?v=HpqWSjuUl_A
 
-
-   
+ 
 
 6. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
 
