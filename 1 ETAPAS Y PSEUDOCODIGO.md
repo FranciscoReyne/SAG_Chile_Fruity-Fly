@@ -201,6 +201,12 @@ Ajusta y haz la prueba con los datos del SAG.
 
 ---
 
+
+
+## Malla hexagonal en mapas de QGIS.
+
+Leer: https://mappinggis.com/2024/07/uso-de-qgis-para-crear-mapas-hexagonales/
+
 🚀🚀 😃  🚀🚀
 
 🚀🚀🚀 😃 🚀 🚀🚀
