@@ -1,7 +1,12 @@
+## Hecho en QGIS
+
+Leer: https://mappinggis.com/2024/07/uso-de-qgis-para-crear-mapas-hexagonales/
+
+
 
 # parte 1
 
-¡Claro! Hay varias opciones para convertir tu código Python en un ejecutable (.exe) que pueda correr en cualquier PC con Windows. Aquí te presento algunas de las librerías más populares:
+ Hay varias opciones para convertir código Python en un ejecutable (.exe) que pueda correr en cualquier PC con Windows. Aquí te presento algunas de las librerías más populares:
 
 1. PyInstaller: Es una de las herramientas más populares para crear ejecutables de Python. Puedes instalarla mediante pip: pip install pyinstaller. Luego, puedes crear un ejecutable con el comando pyinstaller --onefile tu_script.py.
 2. cx_Freeze: Otra herramienta popular para crear ejecutables de Python. Puedes instalarla mediante pip: pip install cx_Freeze. Luego, puedes crear un ejecutable con el comando cxfreeze tu_script.py --target-dir dist.
