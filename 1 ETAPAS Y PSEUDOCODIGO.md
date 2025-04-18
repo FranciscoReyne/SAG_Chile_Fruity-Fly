@@ -36,8 +36,8 @@ A continuacion presentamos una serie de etapas generales para una visualizacion 
 6. (opcional) Resumen de datos, agrupación de datos: Total, total por region, comuna.
 
 
-7. Propagacion. Estimacion reglas simples,  reg. lineal, machine learning,
-8. mapeo heatmap, modelo de propagación (infectabilidad, etc modelos de epidemias).
+7. (opcional) Propagacion. Estimacion reglas simples,  reg. lineal, machine learning, modelo de propagación (infectabilidad, etc modelos de epidemias).
+8. Mapeo heatmap.
 9. Visualización y Ux de información: kepler gl e installador (.exe)
 
 
