@@ -10,6 +10,12 @@ A continuacion presentamos una serie de etapas generales para una visualizacion 
         https://www.sag.gob.cl/ambitos-de-accion/mosca-de-la-fruta/publicaciones?field_tema_otros_documentos_target_id=2749&field_tipo_de_publicacion_target_id=244&field_fecha_otros_value=&title=&order=field_fecha_otros&sort=desc
 
 
+1.1 Unir datos de varios a un pdf.
+
+
+
+
+
 2. pasar de pdf a tabla
 
         camelot: fx read_pdf
@@ -58,14 +64,56 @@ A continuacion presentamos una serie de etapas generales para una visualizacion 
 
         !pip install camelot-py
 
+## unir varios a un pdf
 
-## pasar de pdf a dataframe: Código base
+        from pypdf import PdfMerger
+        import os
+        
+        def unir_pdfs(directorio, archivo_salida="documento_unido.pdf"):
+            """
+            Une varios archivos PDF en uno solo, cada PDF como una página separada.
+            
+            Args:
+                        directorio: Ruta al directorio que contiene los PDFs
+                archivo_salida: Nombre del archivo PDF resultante
+            """
+            # Crear objeto para unir PDFs
+            fusionador = PdfMerger()
+            
+            # Listar archivos PDF en el directorio
+            archivos_pdf = [f for f in os.listdir(directorio) if f.lower().endswith('.pdf')]
+            
+            # Ordenar los archivos (opcional)
+            archivos_pdf.sort()
+            
+            # Añadir cada PDF al fusionador
+            for pdf in archivos_pdf:
+                ruta_completa = os.path.join(directorio, pdf)
+                fusionador.append(ruta_completa)
+            
+            # Guardar el resultado
+            fusionador.write(archivo_salida)
+            fusionador.close()
+            
+            print(f"¡Se han unido {len(archivos_pdf)} archivos en '{archivo_salida}'!")
+        
+        # Ejemplo de uso
+        if __name__ == "__main__":
+            # Cambia esto a la ruta donde están tus PDFs
+            carpeta_pdfs = "ruta/a/tus/pdfs"
+            unir_pdfs(carpeta_pdfs, "documento_final.pdf")
+
+
+
+
+
+## pasar de pdf(s) a dataframes: Código base
 
         import pandas as pd
         from IPython.display import display
         
         # Extraer tablas (desde la primera página)
-        tables = camelot.read_pdf("FICHA_A1_Malloa_19032025.pdf", pages="1")
+        tables = camelot.read_pdf("FICHA_A1_Malloa_19032025.pdf", pages="1") #editar para que pase por cada pagina.
         # Convertir la primera tabla a DataFrame
         df = tables[0].df
         df = pd.DataFrame(df)
