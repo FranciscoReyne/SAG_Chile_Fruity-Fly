@@ -11,11 +11,27 @@ A continuacion presentamos una serie de etapas generales para una visualizacion 
 
 
 1.1 Unir datos de varios a un pdf.
+---
+        from pypdf import PdfMerger
+        
+        # Lista de archivos PDF que quieres combinar
+        pdf_files = ["archivo1.pdf", "archivo2.pdf", "archivo3.pdf"]  # Cambia por tus PDFs
+        
+        # Crear el objeto de combinación
+        merger = PdfMerger()
+        
+        # Agregar cada PDF como una nueva página
+        for pdf in pdf_files:
+            merger.append(pdf)
+        
+        # Guardar el PDF final
+        merger.write("PDF_unido.pdf")
+        merger.close()
+        
+        print("PDF combinado correctamente 🎉")
 
 
-
-
-
+---
 2. pasar de pdf a tabla
 
         camelot: fx read_pdf
@@ -104,7 +120,29 @@ A continuacion presentamos una serie de etapas generales para una visualizacion 
             unir_pdfs(carpeta_pdfs, "documento_final.pdf")
 
 
+---
 
+op2:
+
+        from pypdf import PdfMerger
+        
+        # Lista de archivos PDF que quieres combinar
+        pdf_files = ["archivo1.pdf", "archivo2.pdf", "archivo3.pdf"]  # Cambia por tus PDFs
+        
+        # Crear el objeto de combinación
+        merger = PdfMerger()
+        
+        # Agregar cada PDF como una nueva página
+        for pdf in pdf_files:
+            merger.append(pdf)
+        
+        # Guardar el PDF final
+        merger.write("PDF_unido.pdf")
+        merger.close()
+        
+        print("PDF combinado correctamente 🎉")
+
+----
 
 
 ## pasar de pdf(s) a dataframes: Código base
