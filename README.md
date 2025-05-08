@@ -7,12 +7,6 @@
 </p>
 
 
-<p align="center">
-  
-<img src="33.png" width="640"/>
-
-</p>
-
 
 SAG Chile Visualización de densidad poblacional de plaga - MEDITERRANEAN FRUIT FLY Mosca de la Fruta (Ceratitis capitata  (Wied) )
 
